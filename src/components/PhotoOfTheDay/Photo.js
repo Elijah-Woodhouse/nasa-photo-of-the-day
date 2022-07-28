@@ -26,14 +26,15 @@ const IsVideo = props => {
 
 const Photo = props => {
 
-  //console.log(props.type);
+  console.log(props.type);
   const isImage = props.type;
+  //console.log(props.src);
 
 
   if (isImage === "video") {
-    return <IsVideo src={props.url} />;
+    return <IsVideo />;
   }
-  return <IsImg src={props.url} />;
+  return <IsImg src={props.src} />;
 
 
 }
