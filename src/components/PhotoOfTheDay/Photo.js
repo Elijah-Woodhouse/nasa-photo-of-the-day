@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import YouTube from "react-youtube";
 
 
@@ -14,29 +14,21 @@ const IsImg = props => {
 
 const IsVideo = props => {
   return (
-
     <div className="picture">
       <YouTube videoId={props.src}/>
     </div>
   )
-  //console.log(props.src.substr(30, 46));
 }
 
 
 
 const Photo = props => {
-
-  console.log(props.type);
   const isImage = props.type;
-  //console.log(props.src);
-
 
   if (isImage === "video") {
     return <IsVideo />;
   }
-  return <IsImg src={props.src} />;
-
-
+  return <IsImg src={props.src}/>;
 }
 
 export default Photo;

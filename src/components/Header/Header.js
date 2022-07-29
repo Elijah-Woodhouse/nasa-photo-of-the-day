@@ -1,17 +1,20 @@
-import React from "react";
 
-const Header = props => {
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+
+function Header() {
   return (
-    <div className="header">
-      <div className="title">
-      </div>
-      <div className="date">
-        Hello There 10/10/10: {props.date}
-      </div>
-      <button>Click Here to see more</button>
-    </div>
-  )
-}
-
+      <Navbar bg="dark" variant="dark">
+        <Container>
+          <Navbar.Brand href="#home">Welcome to the space page</Navbar.Brand>
+          <Nav className="me-auto">
+            <Nav.Link href="#home">Home</Nav.Link>
+            <Nav.Link href="#features">Features</Nav.Link>
+            <Nav.Link href="#pricing">Pricing</Nav.Link>
+          </Nav>
+        </Container>
+      </Navbar>
+)}
 
 export default Header;
