@@ -1,0 +1,4 @@
+.marsCard {
+  display: flex;
+  flex-wrap: wrap;
+}

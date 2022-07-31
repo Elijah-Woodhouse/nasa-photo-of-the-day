@@ -6,12 +6,12 @@ const PhotoCard = props => {
 
   const { photos } = props;
 
-  //console.log(photos);
+  //console.log(photos[0]);
 
   return (
     <div>
     {photos.map(photo => {
-      return <MarsPhotos photo={photo.img_src} />
+      return <MarsPhotos photo={photo} key={photo.id} />
     })}
     </div>
   );

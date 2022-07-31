@@ -4,7 +4,6 @@ import Photos from "./components/PhotoOfTheDay/Photo.css"
 import Photo from "./components/PhotoOfTheDay/Photo"
 import Header from "./components/Header/Header.js"
 import PhotoCard from "./components/PhotoDB/Photos"
-import PhotoData from "./components/PhotoDB/Photo"
 import "./App.css";
 
 const apiKey = "AbmmzjW5evKrln9xUWBOxySnraDDYfq47pv3xj85";
@@ -43,9 +42,7 @@ const App = () => {
         .then(res =>{
           const photoData = res.data.photos;
           //console.log(res.data);
-          setPhotos(photoData);
-          console.log(photoData[0].img_src);
-          return photoData;
+          return setPhotos(photoData);
         })
         .catch(err =>{
           console.log(err)
@@ -60,7 +57,7 @@ const App = () => {
       <h2>{data.title}</h2>
       <h2>{data.date}</h2>
       <Photo className="ImageStyles" type={data.media_type} src={data.url} />
-      <PhotoData photo={photos} />
+      <PhotoCard photos={photos} />
     </div>
   );
 }
