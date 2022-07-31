@@ -1,5 +1,6 @@
 import React from "react";
 import MarsPhotos from "./Photo";
+import './PhotoDBStyles.css'
 
 
 const PhotoCard = props => {
@@ -9,7 +10,7 @@ const PhotoCard = props => {
   //console.log(photos[0]);
 
   return (
-    <div>
+    <div className="card-container">
     {photos.map(photo => {
       return <MarsPhotos photo={photo} key={photo.id} />
     })}

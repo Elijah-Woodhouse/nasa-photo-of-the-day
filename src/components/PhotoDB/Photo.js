@@ -13,7 +13,6 @@ const MarsPhotos = props => {
   //console.log(photo.img_src);
 
   return (
-    <div className="marsCard">
     <Card style={{ width: '18rem' }}>
       <Card.Img variant="top" src={photo.img_src} />
       <Card.Body>
@@ -25,7 +24,6 @@ const MarsPhotos = props => {
         <Button variant="primary">Go somewhere</Button>
       </Card.Body>
     </Card>
-    </div>
   );
 };
 
