@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from "react";
 import YouTube from "react-youtube";
+import "./Photo.css";
 
 
 
 const IsImg = props => {
   return (
     <div className="picture">
-      <img src={props.src} width="320" height="240"/>
+      <img src={props.src}/>
     </div>
   )
 }
